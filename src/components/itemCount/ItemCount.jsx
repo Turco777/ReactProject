@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import estilos from './contador.module.css'
+import estilos from './ItemCount.module.css';
 
-const Contador = ({stock,initial,onAdd}) =>{
+const ItemCount = ({stock,initial,onAdd}) =>{
  
    const [count, setCount] = useState(0)
  
@@ -27,4 +27,4 @@ const restar = ()=>{
     )
 }
 
-export default Contador
+export default ItemCount

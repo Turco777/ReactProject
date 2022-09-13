@@ -1,8 +1,8 @@
 import React from 'react';
 import { CartWidget } from './CartWidget';
-import  estilos from'./nav.module.css'
+import  estilos from'./NavBar.module.css'
 
-const Nav = () =>{
+const NavBar = () =>{
     return( 
         <header>
             <nav className={estilos.nav}>
@@ -33,4 +33,4 @@ const Nav = () =>{
     )
 }
 
-export default Nav;
+export default NavBar;

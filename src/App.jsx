@@ -1,9 +1,10 @@
 import './App.css';
-import Nav from './components/nav/nav'
+import NavBar from './components/navBar/NavBar';
 import Main from './components/main/main';
 import Footer from './components/footer/footer';
-import ItemListContainer from './components/itemListContainer/itemListContainer';
-import Contador from './components/contador/contador';
+import ItemListContainer from './components/itemListContainer/ItemListContainer';
+import ItemCount from './components/itemCount/ItemCount';
+import ItemDetailContainerm from './components/itemDetailContainer/ItemDetailContainer';
 
 
 
@@ -19,11 +20,11 @@ const onAdd = ()=>{
 }
   return (
     <>
-    <Nav/>
+    <NavBar/>
     <Main/>
     <ItemListContainer bienvenida={bienvenida}/>
-    <Contador stock={stock} initial={initial} onAdd={onAdd}/>
-   
+    <ItemCount stock={stock} initial={initial} onAdd={onAdd}/>
+    <ItemDetailContainerm />_
     <Footer/>
     
     </>
