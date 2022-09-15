@@ -1,6 +1,7 @@
 import React from 'react';
 import { CartWidget } from './CartWidget';
-import  estilos from'./NavBar.module.css'
+import  estilos from'./NavBar.module.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = () =>{
     return( 
@@ -11,21 +12,21 @@ const NavBar = () =>{
                 <div className={estilos.logo}>
                  <p>Mundo <b className={estilos.masco}>MASCOTAS</b></p>
                  </div>
-                    <li>
-                        <a href="http://">Nosotros</a>
-                    </li>
-                    <li>
-                        <a href="http://">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="http://">Nuestros clientes</a>
-                    </li>
-                    <li>
-                        <a href="http://">Ubicacion</a>
-                    </li>
-                   <li>
-                    <CartWidget/>
-                   </li>
+                    
+                    <Link to="/categorias/perros">Perros</Link>
+                    
+                
+                    <Link to="/categorias/gatos">Gatos</Link>
+                
+            
+                    <Link to="/categorias/peces">peces</Link>
+                
+            
+                    <Link to="/">Inicio</Link>
+                
+
+                    <Link to="/contador"><CartWidget/></Link>
+                
                 </ul>
               
             </nav>
