@@ -16,7 +16,7 @@ useEffect(() =>{
     const getData = new Promise((resolve, reject) => {
         setTimeout(()=>{
       resolve(product)
-        },2000)
+        },1000)
     })
     getData.then((data)=>{setData(data)})
 },[product])

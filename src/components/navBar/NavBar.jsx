@@ -10,8 +10,8 @@ const NavBar = () =>{
                 
                 <ul>
                 <div className={estilos.logo}>
-                 <p>Mundo <b className={estilos.masco}>MASCOTAS</b></p>
-                 </div>
+                <p>Mundo <b className={estilos.masco}>MASCOTAS</b></p>
+                </div>
                     
                     <Link to="/categorias/perros">Perros</Link>
                     
@@ -28,7 +28,7 @@ const NavBar = () =>{
                     <Link to="/contador"><CartWidget/></Link>
                 
                 </ul>
-              
+            
             </nav>
         </header>
     )

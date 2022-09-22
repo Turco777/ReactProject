@@ -1,10 +1,10 @@
 .contenedorDiv{
     background-color: black;
-   width: 400px;
+    width: 400px;
     display: grid;
     place-content: center;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 .btn{
     background-color: blue;
@@ -31,6 +31,6 @@
     cursor: pointer;
 }
 .acciones:hover{
-color: white;
+    color: white;
     
 }

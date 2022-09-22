@@ -27,3 +27,9 @@
     color: rgb(9, 187, 54);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.cart{
+    color: red;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
