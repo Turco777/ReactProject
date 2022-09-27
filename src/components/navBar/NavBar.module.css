@@ -45,3 +45,9 @@ a:hover{
 .icono:hover{
     color: black;
 }
+.connt{
+
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+}

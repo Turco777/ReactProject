@@ -29,12 +29,26 @@ const isToCart = (id) => {
 const removeProduct = (id) => SetCart(cart.filter(product => product.id !== id))
 
 
+const totalProducts = ()=> cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity,0);
+    
+
+const totalPrice = ()=>{
+return cart.reduce((prev, act) => prev + act.quantity * act.precio, 0)
+}
+
+
     return (
         <CartContext.Provider value={{
             clearCart,
             isToCart,
             removeProduct,
-            addProduct
+            addProduct,
+            totalPrice,
+            totalProducts,
+
+cart
+
+
 
         }}>
 {children}
