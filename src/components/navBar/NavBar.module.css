@@ -4,12 +4,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 ul{
-   display: flex;
-   justify-content: space-between;
-   text-decoration: none;
-   flex-direction: row;
-   border: 2px solid black;
-   margin: 0;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    flex-direction: row;
+    border: 2px solid black;
+    margin: 0;
 }
 li{
     text-decoration: none;
@@ -36,11 +36,11 @@ a:hover{
     border-radius: 5PX;
 }
 .icono{
-   color: rgb(15, 143, 100);
-   display: grid;
-   place-items: center;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-   font-weight: 800;
+    color: rgb(15, 143, 100);
+    display: grid;
+    place-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
 }
 .icono:hover{
     color: black;

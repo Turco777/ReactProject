@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import { productos } from '../mock/productos'
 import  ItemList  from '../itemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { CombSpinner } from "react-spinners-kit";
+import estilos from'./itemList.module.css'
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
 
 
 const ItemListContainer = () =>{
@@ -12,31 +14,33 @@ const ItemListContainer = () =>{
     const {categoriasName} = useParams()
 
     useEffect(()=> {
-        const listadoProducts = new Promise((res,rej)=>{
-            const prodFiltrados = productos.filter((prod)=>prod.categoria === categoriasName )
-
-        setTimeout(()=>{
-            res(categoriasName ? prodFiltrados : productos )
-            },3000) 
-        });
-
-
-    listadoProducts.then((data)=>{
-        setItems(data)
-        setLoanding(false)
-    })
+   
+       
+        const productosCollection = collection(db, "productos")
         
-        .catch((error) => {
-        console.log('hubo un error',error)
-        }
-
-        )
-
-        return() => {
-            setLoanding(true)
-        }
-
-    }, [categoriasName])
+ 
+    if (categoriasName) {
+     const prodFilter = query(
+       productosCollection,where("categoria","==",categoriasName)
+     )
+     getDocs(prodFilter).then((res) =>
+         setItems(res.docs.map((product) => ({ id: product.id, ...product.data() }))
+         ) 
+       );
+    } else {
+     getDocs(productosCollection).then((res) =>
+     setItems(
+       res.docs.map((product) => ({ id: product.id, ...product.data() }))
+     )
+   );
+    }
+         
+ 
+ 
+       
+    setLoanding(false)
+ 
+     }, [categoriasName])
 
 
     return(

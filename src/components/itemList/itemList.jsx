@@ -4,13 +4,11 @@ import estilos from './ItemList.module.css'
 
 const ItemList = ({items})=>{
 
-    return <div className={estilos.productos}>
+    return <div className={estilos.contenedor}>
     {
         items.map((items)=>{
             return(
-                <div className={estilos.contenedor}>
                 <Item items={items}/>
-                </div>
             )
         })
     }

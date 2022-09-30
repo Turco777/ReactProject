@@ -22,7 +22,7 @@ const restar = ()=>{
             <button className={estilos.acciones} onClick={sumar}>+</button>
             <button className={estilos.acciones} onClick={restar}>-</button>
             <p className={estilos.Productos}>Productos = {count}</p>
-            <button onClick={() => onAdd(count)}> agregar al carrito</button>
+            <button className={estilos.btnAgregar} onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 }

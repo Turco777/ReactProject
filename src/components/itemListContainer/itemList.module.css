@@ -1,14 +1,6 @@
-.saludo{
-    text-align: center;
-    color: blue;
-}
-
-.text{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center ;
-}
-
-.cont{
-    background-color: black;
+.contenedor{
     display: flex;
-}
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }

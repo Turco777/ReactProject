@@ -20,3 +20,7 @@
     place-content: center;
     align-items: center;
 }
+
+.producto:hover{
+    border: 0.5px ridge black;
+}
