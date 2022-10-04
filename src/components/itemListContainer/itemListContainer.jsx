@@ -14,37 +14,36 @@ const ItemListContainer = () =>{
     const {categoriasName} = useParams()
 
     useEffect(()=> {
-   
-       
+    
+    
         const productosCollection = collection(db, "productos")
         
- 
+
     if (categoriasName) {
-     const prodFilter = query(
-       productosCollection,where("categoria","==",categoriasName)
-     )
-     getDocs(prodFilter).then((res) =>
-         setItems(res.docs.map((product) => ({ id: product.id, ...product.data() }))
-         ) 
-       );
+    const prodFilter = query(
+        productosCollection,where("categoria","==",categoriasName)
+    )
+    getDocs(prodFilter).then((res) =>
+        setItems(res.docs.map((product) => ({ id: product.id, ...product.data() }))
+        ) 
+        );
     } else {
-     getDocs(productosCollection).then((res) =>
-     setItems(
-       res.docs.map((product) => ({ id: product.id, ...product.data() }))
-     )
-   );
+    getDocs(productosCollection).then((res) =>
+    setItems(
+        res.docs.map((product) => ({ id: product.id, ...product.data() }))
+    )
+    );
     }
-         
- 
- 
-       
+    
+
+
     setLoanding(false)
- 
-     }, [categoriasName])
+
+    }, [categoriasName])
 
 
     return(
-    <div>
+    <div className={estilos.contenedor}>
         {isloanding ? ( <>
         <h2>Cargando productos....</h2>
         <CombSpinner color="black" font-size="900"/>
