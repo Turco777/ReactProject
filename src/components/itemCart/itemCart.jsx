@@ -1,6 +1,6 @@
 import React from "react"
-import { useCartContext } from "../../context/CardContext"
 import estilos from "./itemCart.module.css"
+import { useCartContext } from "../../context/CardContext"
 
 
 const ItemCart = ({ producto }) => {

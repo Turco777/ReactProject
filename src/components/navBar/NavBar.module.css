@@ -35,19 +35,3 @@ a:hover{
     font-weight: 100;
     border-radius: 5PX;
 }
-.icono{
-    color: rgb(15, 143, 100);
-    display: grid;
-    place-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 800;
-}
-.icono:hover{
-    color: black;
-}
-.connt{
-
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-}

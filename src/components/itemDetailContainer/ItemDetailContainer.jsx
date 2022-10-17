@@ -27,7 +27,9 @@ useEffect(() =>{
 
     return(
         
-            <ItemDetail data={data}/>
+        <>
+        {data ? (<ItemDetail data={data}/>) : (<h2 >Cargando...</h2>)}
+        </>
     )
 }
 

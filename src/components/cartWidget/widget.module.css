@@ -1,0 +1,18 @@
+.connt{
+
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.icono{
+    color: rgb(15, 143, 100);
+   
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 800;
+    
+    
+ }
+ .icono:hover{
+     color: black;
+ }

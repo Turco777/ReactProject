@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './components/cart/Cart';
 
 import CartProvider from './context/CardContext';
+import FinDeCompra from './components/finDeCompra/finDeCompra';
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
       <Route path='/itemdetail/:idProd' element={<ItemDetailContainerm/>}/>
       <Route path='/categorias/:categoriasName'element={<ItemListContainer/>}/>
       <Route path='/Cart' element={<Cart/>}/>
+      <Route  path='/finDeCompra' element={<FinDeCompra/>} />
     </Routes>
 
     </CartProvider>

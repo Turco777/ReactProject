@@ -21,6 +21,7 @@
     align-items: center;
 }
 
-.producto:hover{
-    border: 0.5px ridge black;
+.detalles:hover{
+    color: blue;
+    border: 1px solid black;
 }

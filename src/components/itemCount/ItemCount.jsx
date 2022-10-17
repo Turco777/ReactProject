@@ -2,19 +2,16 @@ import React, { useState } from "react";
 import estilos from './ItemCount.module.css';
 
 const ItemCount = ({stock,initial,onAdd}) =>{
- 
-   const [count, setCount] = useState(0)
- 
- 
+
+    const [count, setCount] = useState(0)
+
 const sumar = () =>{
-   count < stock ? setCount(count + 1) : alert('llegaste al maximo que podes comprar')
+    count < stock ? setCount(count + 1) : alert('llegaste al maximo que podes comprar')
 }
 
 const restar = ()=>{
-   count > initial ? setCount(count - 1) : alert("tenes que agregar productos")
+    count > initial ? setCount(count - 1) : alert("tenes que agregar productos")
 }
-
-
 
 
     return(
